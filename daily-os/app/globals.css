@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html, body {
+  height: 100%;
+  overscroll-behavior-y: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background: #FFFFFF;
+  color: #0A0A0A;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Barre de progression fine, signature du produit */
+.bar-track {
+  height: 6px;
+  background: #EFEFED;
+  border-radius: 999px;
+  overflow: hidden;
+}
+.bar-fill {
+  height: 100%;
+  background: #0A0A0A;
+  border-radius: 999px;
+  transition: width .25s ease-out;
+}
+
+.card {
+  border: 1px solid #E5E5E3;
+  border-radius: 14px;
+  background: #FFFFFF;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 10px;
+  padding: 12px 16px;
+  transition: opacity .12s ease, transform .05s ease;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.btn:active { transform: scale(0.98); }
+.btn-primary {
+  background: #0A0A0A;
+  color: #FFFFFF;
+}
+.btn-primary:disabled {
+  opacity: .4;
+}
+.btn-ghost {
+  background: transparent;
+  color: #0A0A0A;
+  border: 1px solid #E5E5E3;
+}
+
+.input {
+  width: 100%;
+  border: 1px solid #E5E5E3;
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 15px;
+  background: #FFFFFF;
+  color: #0A0A0A;
+}
+.input:focus {
+  outline: 2px solid #0A0A0A;
+  outline-offset: 1px;
+}
+.input::placeholder {
+  color: #B3B3AE;
+}
+
+.label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #8A8A85;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Focus clavier visible partout */
+a:focus-visible, button:focus-visible, input:focus-visible {
+  outline: 2px solid #0A0A0A;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
